@@ -1,0 +1,114 @@
+@import '../../styles/base.scss';
+
+@mixin minWidthDisplay($size, $display, $visibility) {
+    @media only screen and (min-width: $size){
+        display: $display;
+        visibility: $visibility;
+    }
+}
+
+@mixin bars {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin crossBar($rotateDeg) {
+    content: "";
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    top: -5px;
+    transform: rotate($rotateDeg);
+}
+
+@mixin rotateAndStop($name, $rotateDegree) {
+    animation: $name 1s;
+
+    @keyframes #{$name}{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate($rotateDegree);
+        }
+    }
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    box-shadow: 0px 0px 10px $box-shadow;
+
+    .brand{
+        display: flex;
+        align-items: center;
+
+        span{
+            margin: auto 10px;
+        }
+    }
+    .crossBars{
+        @include bars();
+        @include minWidthDisplay(600px, none, hidden);
+        div{
+            position: relative;
+            border-top: 5px solid transparent;
+            
+            &:nth-child(2){
+                &::before{
+                    @include crossBar(-45deg);
+                    @include rotateAndStop(rotateTop, -45deg);
+                } 
+                &::after{
+                    @include crossBar(45deg);
+                    @include rotateAndStop(rotateBelow, 45deg);
+                } 
+            }
+        }
+    }
+    .menuBars{
+        @include bars();
+        @include minWidthDisplay(600px, none, hidden);
+
+        div{
+            border-top: 5px solid black;
+        }
+    }
+    .navLinks{
+        display: none;
+        visibility: hidden;
+        
+        @include minWidthDisplay(600px, block, visible);
+
+        a{
+            margin: auto 10px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+
+            &:hover{
+                color: aqua;
+            }
+        }
+
+        .active{
+            text-decoration: underline #000;
+        }
+    }
+
+    .show{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        justify-content: space-between;
+        visibility: visible;
+    }
+}

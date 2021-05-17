@@ -1,0 +1,43 @@
+@import '../../styles/base.scss';
+$name-text-shadow: rgb(158, 158, 158);
+$sky-blue: #00a1ff;
+
+.hero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+    margin: auto;
+    width: fit-content;
+    font-size: 1.5rem;
+    
+    h1{
+        font-size: 2.5rem;
+        margin-top: 100px;
+
+        span{
+            text-shadow: 2px 2px 1px $name-text-shadow;
+        }
+    }
+    article{
+        margin-top: 50px;
+    }
+    .link{
+        margin: 100px auto;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 5px solid $sky-blue;
+        color: black;
+        width: fit-content;
+
+        &:hover{
+            background-color: $sky-blue;
+            color: white;
+        }
+
+        a{
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}

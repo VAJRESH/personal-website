@@ -1,0 +1,18 @@
+@import '../../styles/base.scss';
+
+.footer {
+    position: fixed;
+    bottom: 0;
+  width: 100%;
+  background-color: $light-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
