@@ -1,4 +1,5 @@
 @import '../../styles/base.scss';
+$navbar-bg: #fff;
 
 @mixin minWidthDisplay($size, $display, $visibility) {
     @media only screen and (min-width: $size){
@@ -43,8 +44,16 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    width: 100%;
+    min-height: $navbar-height;
     padding: 10px 20px;
     font-size: 1.2em;
+    background-color: $navbar-bg;
     box-shadow: 0px 0px 10px $box-shadow;
 
     .brand{
@@ -89,10 +98,11 @@
         @include minWidthDisplay(600px, block, visible);
 
         a{
-            margin: auto 10px;
+            margin: auto 30px;
             text-decoration: none;
             color: #000;
             font-weight: 500;
+            text-align: center;
 
             &:hover{
                 color: aqua;

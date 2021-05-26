@@ -1,0 +1,172 @@
+@import "../../styles/base.scss";
+
+// @mixin slideUp($name) {
+//   animation: $name 1s;
+
+//   @keyframes #{$name} {
+//     from{
+//       transform: translate(0px, 100px);
+//     }
+//     to{
+//       transform: translate(0px, 0px);
+//     }
+//   }
+// }
+
+.contactUs {
+  text-align: center;
+  font-size: $para-size;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: $heading-size;
+  }
+
+  .boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+    // animation
+    .fadeIn {
+      @include fadeIn(box);
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid black;
+      max-width: 40vw;
+      min-width: 250px;
+      min-height: 16rem;
+      padding: 10px;
+      margin: 10px;
+      transform: translate(0px, 0px);
+      
+      article * {
+          margin: 10px auto;
+      }
+      button {
+        padding: 10px 20px;
+      }
+      ul {
+        display: none;
+        visibility: hidden;
+      }
+      .callNow, .chatNow{
+        width: 10rem;
+        margin: auto;
+      }
+      .callNow{
+        background-color: aquamarine;
+      }
+
+      .chatNow {
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+        position: relative;
+        text-align: center;
+      
+        &:hover .label {
+          opacity: 0;
+          transition: opacity 0.5s 0.125s ease-out;
+        }
+        &:hover .icon {
+          border-radius: 1em;
+          margin: 0 0;
+        }
+        .icon, .label{
+          background-color: aquamarine;
+        }
+      
+        .label{
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          opacity: 1;
+          transition: opacity .5s .75s ease-out;
+        }
+        .icon{
+          border-radius: 50%;
+          padding: 0 5px;
+          height: 35px;
+          width: 35px;
+        }
+      }
+    }
+  }
+}
+
+
+
+// .follow, .share {
+//     display: inline-block;
+//     cursor: default;
+//     padding: 0;
+//     margin: 0 .5em;
+//     position: relative;
+//     text-align: center;
+
+//     &:hover .label {
+//       opacity: 0;
+//       transition: opacity .5s .125s ease-out;
+//     }
+//     &:hover .icon {
+//       border-radius: 1em;
+//       margin: 0 0;
+//     }
+//   }
+
+//   .icon, .label {
+//     background-color: red;
+//     line-height: 2rem;
+//   }
+//   .label {
+//     border-radius: 1rem;
+//     position: absolute;
+//     font-size: .618em;
+//     font-weight: 900;
+//     letter-spacing: .0816em;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     opacity: 1;
+//     pointer-events: none;
+//     text-transform: uppercase;
+//     transition: opacity .5s .75s ease-out;
+//   }
+
+//   .icon {
+//     border-radius: 0;
+//     cursor: pointer;
+//     display: inline-block;
+//     height: 2em;
+//     margin: 0 -.5em;
+//     transition:
+//       background-color .5s ease-out,
+//       border-radius .5s .25s ease-out,
+//       margin .5s .25s ease-out;
+//     width: 2em;
+
+//     &.first {
+//       border-bottom-left-radius: 1em;
+//       border-top-left-radius: 1em;
+//       margin-left: 0;
+//     }
+
+//     &.last {
+//       border-bottom-right-radius: 1em;
+//       border-top-right-radius: 1em;
+//       margin-right: 0;
+//     }
+
+//     &:hover {
+//       background-color: black;
+//       color: beige;
+//     }
+//   }

@@ -1,6 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import MetaData from "../MetaData/MetaData";
+import styles from './Layout.module.scss';
 
 export default function Layout({ children }) {
   return (
@@ -13,12 +14,11 @@ export default function Layout({ children }) {
         }}
         navLinks={[
           { name: "Home", path: "/" },
-          { name: "Get In Touch", path: "/contact" },
           { name: "Projects", path: "/projects" },
         ]}
       />
 
-      <main>{children}</main>
+      <main className={styles.layoutContainer}>{children}</main>
 
       <Footer></Footer>
     </div>

@@ -1,4 +1,24 @@
 $font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
 $light-white: #eaeaea;
 $box-shadow:  rgb(37, 37, 37);
+
+$para-size: 1.5rem;
+$heading-size: 2.5rem;
+
+$footer-height: 30px;
+$navbar-height: 70px;
+
+@mixin fadeIn($name) {
+    animation: $name 3s;
+  
+    @keyframes #{$name} {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }

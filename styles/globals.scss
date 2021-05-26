@@ -10,3 +10,19 @@ html,
 body {
   font-family: $font;
 }
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  height: 100%;
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+}
+
+
+a{
+  color: #000;
+  text-decoration: none;
+}

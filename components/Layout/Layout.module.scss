@@ -1,0 +1,10 @@
+@import '../../styles/base.scss';
+
+.layoutContainer{
+    @media screen and (min-height: 540px) and (min-width: 600px) {
+        height: calc(100vh - 100px);
+        scroll-snap-type: y mandatory;
+        scroll-padding: 10px;
+        overflow-y: scroll;
+    }
+}

@@ -1,37 +1,76 @@
 @import '../../styles/base.scss';
 $name-text-shadow: rgb(158, 158, 158);
 $sky-blue: #00a1ff;
+$para-size: 1.5rem;
+$heading-size: 2.5rem;
 
-.hero{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;   
+@keyframes scaleUp {
+    from{
+        transform: scale(0.1);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes rotateSideways {
+    0%, 100%{
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform: rotateY(180deg);
+    }
+}
+
+
+.hero{   
     margin: auto;
+    text-align: center;
     width: fit-content;
-    font-size: 1.5rem;
+    font-size: $para-size;
     
     h1{
-        font-size: 2.5rem;
-        margin-top: 100px;
+        font-size: $heading-size;
+        margin-top: 70px;
+        animation: scaleUp 1s 1;
 
         span{
+            display: inline-block;
             text-shadow: 2px 2px 1px $name-text-shadow;
+        }
+        .flip{
+            animation: rotateSideways 0.5s ease-out;
+            color: $sky-blue;
         }
     }
     article{
         margin-top: 50px;
     }
     .link{
-        margin: 100px auto;
+        margin: 50px auto;
         padding: 10px 20px;
         border-radius: 5px;
         border: 5px solid $sky-blue;
         color: black;
         width: fit-content;
+        position: relative;
+        @include fadeIn(link);
 
         &:hover{
+            color: #fff;
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
             background-color: $sky-blue;
-            color: white;
+            transition: top 0.3s ease-in;
+        }
+        &:hover::before{
+            top: 0;
         }
 
         a{
