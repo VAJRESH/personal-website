@@ -53,6 +53,13 @@ $gray: rgb(192, 192, 192);
         background-color: $light-gray;
       }
     }
+
+    .tags{
+      span:hover{
+        background-color: $gray;
+        cursor: pointer;
+      }
+    }
   }
   .tags {
     margin: 10px;
@@ -72,9 +79,13 @@ $gray: rgb(192, 192, 192);
     .card {
       display: inline-flex;
       flex-direction: column;
+      justify-content: space-between;
+
       position: relative;
       width: 18rem;
+      height: 25rem;
       margin: 10px;
+      
       text-align: justify;
       overflow: hidden;
       border-radius: 5px;
@@ -91,6 +102,16 @@ $gray: rgb(192, 192, 192);
 
       article{
         padding: 5px 15px;
+        height: 28%;
+        overflow: hidden;
+        position: relative;
+
+        &::after{
+          @include pseudoContent(20px, 100px);
+          background: linear-gradient(to right, transparent, #fff);
+          right: 10px;
+          bottom: 0;
+        }
       }
 
     }

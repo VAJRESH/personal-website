@@ -22,3 +22,11 @@ $navbar-height: 70px;
       }
     }
   }
+
+  @mixin pseudoContent($height, $width) {
+    content: "";
+    height: $height;
+    width: $width;
+
+    position: absolute;
+  }
