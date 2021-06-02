@@ -28,6 +28,7 @@ export default function Navbar({ brand, navLinks }) {
         <span>{brand.name}</span>
       </section>
 
+      {/* menu bars visible at small screens */}
       <section
         className={showMenu ? styles.crossBars : styles.menuBars}
         onClick={handleClick}

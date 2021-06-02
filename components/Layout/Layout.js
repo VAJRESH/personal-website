@@ -1,6 +1,6 @@
-import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
-import MetaData from "../MetaData/MetaData";
+import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/Footer";
+import MetaData from "./MetaData/MetaData";
 import styles from './Layout.module.scss';
 
 export default function Layout({ children }) {
@@ -18,6 +18,7 @@ export default function Layout({ children }) {
         ]}
       />
 
+      
       <main className={styles.layoutContainer}>{children}</main>
 
       <Footer></Footer>

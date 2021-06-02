@@ -1,20 +1,23 @@
-@import "../../styles/base.scss";
+@import "../../../styles/base.scss";
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   position: sticky;
   bottom: 0;
 
   width: 100%;
   height: $footer-height;
   background-color: $light-white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 
   a {
     display: flex;
     justify-content: center;
     align-items: center;
+  
     flex-grow: 1;
   }
 }

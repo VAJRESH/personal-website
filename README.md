@@ -38,13 +38,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   - [ ] Add Dark Mode
   - [ ] Deploy
 
-## Progress
+## Progress (Due Date: 5 June, 2021)
 - Created new folder and started project at 21:50 on 13 May, 2021.
 - Added basic info and steps in the `README.md`.
 - Created a basic plan for the project. [15 May, 2021].
 - Created home, get in touch, projects pages [18 May, 2021].
 - Removed get in touch page and added it in the home page, added animations to name, get in touch boxes, added bounce scroll button. [26 May 2021].
 - Added project component which has search bar, tags, and projects cards[28 May, 2021].
+- Added functionality to select tags and minor changes in the card and tags style[31 May, 2021].
 
 ## Technologies Used
 - I am planning to use this technologies and tools
@@ -56,18 +57,3 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Contribution
 - No contribution is accepted
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
