@@ -46,6 +46,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Removed get in touch page and added it in the home page, added animations to name, get in touch boxes, added bounce scroll button. [26 May 2021].
 - Added project component which has search bar, tags, and projects cards[28 May, 2021].
 - Added functionality to select tags and minor changes in the card and tags style[31 May, 2021].
+- Changed the file structure and added search functionality to filter by title[2 June, 2021].
+- Completed the MVP functionality, only adding colors is remaining [3 June, 2021].
 
 ## Technologies Used
 - I am planning to use this technologies and tools

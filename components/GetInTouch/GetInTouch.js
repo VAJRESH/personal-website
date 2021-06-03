@@ -1,8 +1,18 @@
-import { useRef, useCallback, useState } from "react";
-
 import ContactBox from "./ContactBox/ContactBox";
+import useIsElementVisible from "./Logic/animation";
 import styles from "./GetInTouch.module.scss";
 
+
+// TODO
+{
+  /* Tooltip credits */
+}
+{
+  /* chat by i cons from the Noun Project */
+}
+{
+  /* call by FMF Design from the Noun Project */
+}
 
 export default function GetInTouch() {
   const [isElementVisible, slideIn] = useIsElementVisible();
@@ -65,33 +75,4 @@ export default function GetInTouch() {
       </div>
     </div>
   );
-}
-// TODO
-{
-  /* Tooltip credits */
-}
-{
-  /* chat by i cons from the Noun Project */
-}
-{
-  /* call by FMF Design from the Noun Project */
-}
-
-
-// custom hook which makes the element animate when visible
-function useIsElementVisible() {
-  const [isElementVisible, setIsElementVisible] = useState(false);
-
-  const observer = useRef();
-  const slideIn = useCallback((node) => {
-    if (observer.current) observer.current.disconnect();
-
-    observer.current = new IntersectionObserver((entries) => {
-      setIsElementVisible(entries[0].isIntersecting);
-    });
-
-    if (node) observer.current.observe(node);
-  }, []);
-
-  return [isElementVisible, slideIn];
 }

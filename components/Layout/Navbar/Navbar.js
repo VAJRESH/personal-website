@@ -2,20 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { useState } from "react";
-
+import useShowMenu from "./Logic/showMenu";
 import styles from "./Navbar.module.scss";
-
-function useShowMenu() {
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
-
-  function handleClick() {
-    setIsMenuVisible(!isMenuVisible);
-    console.log(isMenuVisible);
-  }
-
-  return [isMenuVisible, handleClick];
-}
 
 export default function Navbar({ brand, navLinks }) {
   const router = useRouter();
