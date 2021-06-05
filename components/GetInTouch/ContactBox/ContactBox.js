@@ -1,8 +1,6 @@
 import Image from "next/image";
 
-export default function ContactBox(props) {
-  const { boxClassName, image, title, text, children } = props;
-
+export default function ContactBox({ boxClassName, image, title, text, children }) {
   return (
     <section className={boxClassName}>
       <Image

@@ -1,18 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from '../Projects.module.scss';
+import styles from "../Projects.module.scss";
 
-export default function Card(props) {
-  const { title, imagePath, tags, description, sourceCodePath, liveDemoPath } =
-    props;
-
+export default function Card({
+  title,
+  status,
+  logoPath,
+  bannerPath,
+  tags,
+  description,
+  sourceCodePath,
+  liveDemoPath,
+}) {
   return (
     <section className={styles.card}>
-      {/* add project status like complete, in progress, not started */}
-      <Image src={imagePath} alt={title} height={150} width={200} />
+      {
+        bannerPath?
+          <Image src={bannerPath} alt={title} height={150} width={200} className={styles.img}/> :
+          <div className={styles.img}>Image</div>
+      }
       {/* add logo at the center inside circle and main image as banner */}
-      <h3>{title}</h3>
+      <div className={styles.logo}>
+        {logoPath ? (
+          <Image src={logoPath} alt="" height={20} width={20} />
+        ) : (
+          "Logo"
+        )}
+      </div>
+      <h4>{title}</h4>
       <article>{description}</article>
 
       <div className={styles.tags}>

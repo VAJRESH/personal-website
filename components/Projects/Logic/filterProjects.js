@@ -1,10 +1,30 @@
 import { useEffect, useState } from "react";
 
-export default function useFilterProjects(projects = [], tagsList = []) {
+function sortByCategory(projects) {
+  return projects.sort((p1, p2) => {
+    if (p1.category === p2.category) return 0;
+
+    return p1.category > p2.category ? 1 : -1;
+  });
+}
+
+export default function useFilterProjects(projects = []) {
   const [selectedTags, setSelectedTags] = useState([]);
-  const [tags, setTags] = useState(tagsList);
+  const [tags, setTags] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState(projects);
 
+  // set the tags to filter out projects dynamically from the projects tag
+  useEffect(() => {
+    let tagList = [];
+    for (let project of projects) {
+      tagList.push(...project.tags);
+    }
+    tagList = [...new Set(tagList)];
+
+    setTags(tagList);
+  }, []);
+
+  // filters out projects when tags are selected
   useEffect(() => {
     const filterProjects = projects.filter((project) => {
       let isTagPresent = true;
@@ -22,7 +42,12 @@ export default function useFilterProjects(projects = [], tagsList = []) {
       return isTagPresent;
     });
 
-    setFilteredProjects(filterProjects);
+    // sort the projects based on categories
+    let sortFilteredProjects = sortByCategory(filterProjects);
+
+    setFilteredProjects(sortFilteredProjects);
+
+    // setFilteredProjects(filterProjects);
   }, [selectedTags]);
 
   function selectTag(index) {
@@ -56,7 +81,8 @@ export default function useFilterProjects(projects = [], tagsList = []) {
       return project.title.toLowerCase().includes(inputText.toLowerCase());
     });
 
-    setFilteredProjects(filterProjects);
+    const sortFilteredProjects = sortByCategory(filterProjects);
+    setFilteredProjects(sortFilteredProjects);
   }
 
   return [

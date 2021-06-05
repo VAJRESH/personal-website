@@ -1,40 +1,35 @@
 import Image from "next/image";
 
-import Card from './Card/Card';
+import Card from "./Card/Card";
 import useFilterProjects from "./Logic/filterProjects";
+import data from "./Data/data.json";
 import styles from "./Projects.module.scss";
-
-const tagLists = ["HTML", "CSS", "JavaScript", "React Js", "Node JS"];
-const projects = [
-  {
-    title: "Media Tracker",
-    imagePath: "/assets/media-tracker.PNG",
-    tags: ["React Js", "JavaScript", "HTML"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit Minus quis sed, iure inventore nulla aspernatur alias dolorem nemo asperiores, tempora, labore assumenda corporis doloribus. Modi culpa dolor beatae vero quibusdam!",
-    sourceCodePath: "#",
-    liveDemoPath: "#",
-  },
-  {
-    title: "Project 2",
-    imagePath: "/assets/chat.svg",
-    tags: ["React Js", "JavaScript", "HTML"],
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    sourceCodePath: "#",
-    liveDemoPath: "#",
-  },
-];
+import React from "react";
 
 export default function Projects() {
-  const [filterByText, filteredProjects, tags, selectedTags, selectTag, unselectTag] =
-    useFilterProjects(projects, tagLists);
+  const [
+    filterByText,
+    filteredProjects,
+    tags,
+    selectedTags,
+    selectTag,
+    unselectTag,
+  ] = useFilterProjects(data.projects);
+
+  // variable for separating projects
+  let category;
 
   return (
     <div className={styles.projects}>
       <h1>Projects</h1>
       <section className={styles.filterBox}>
         <div className={styles.searchBar}>
-          <input type="search" id="search" onChange={filterByText} placeholder="Search" />
+          <input
+            type="search"
+            id="search"
+            onChange={filterByText}
+            placeholder="Search"
+          />
           <label htmlFor="search" className={styles.label}>
             Search
           </label>
@@ -69,15 +64,25 @@ export default function Projects() {
 
         {filteredProjects.map((project) => {
           return (
-            <Card
-              title={project.title}
-              imagePath={project.imagePath}
-              tags={project.tags}
-              description={project.description}
-              sourceCodePath={project.sourceCodePath}
-              liveDemoPath={project.liveDemoPath}
-              key={project.title}
-            />
+            <React.Fragment key={project.title}>
+              {category !== project.category && (
+                <h3>
+                  {
+                    (category =
+                      category !== project.category ? project.category : null)
+                  }
+                </h3>
+              )}
+              <Card
+                title={project.title}
+                logoPath={project.logoPath}
+                bannerPath={project.bannerPath}
+                tags={project.tags}
+                description={project.description}
+                sourceCodePath={project.sourceCodePath}
+                liveDemoPath={project.liveDemoPath}
+              />
+            </React.Fragment>
           );
         })}
       </section>
