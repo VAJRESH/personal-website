@@ -39,6 +39,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## New Features
 - Add Dark Mode
+- Skills Section
+- Education Background
+- Resume Download
 - Show featured projects in home page in rotating cube
 - Pop up modal message after spending 30 seconds
 
@@ -52,7 +55,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Added functionality to select tags and minor changes in the card and tags style[31 May, 2021].
 - Changed the file structure and added search functionality to filter by title[2 June, 2021].
 - Completed the MVP functionality, only adding colors is remaining [3 June, 2021].
-- Added projects category and logo space in the projects card. [5 June, 2021].
+- Added projects category and logo space in the projects card and deployed the project. [5 June, 2021].
+
+## Pending Feature
+- Complete projects details
+- Custom Icons
+- Footer
+- Social Links
 
 ## Technologies Used
 - I am planning to use this technologies and tools
