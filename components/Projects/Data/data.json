@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "title": "Media Tracker",
+      "category": "My Personal Project",
+      "logoPath": "",
+      "bannerPath": "/assets/media-tracker.PNG",
+      "tags": ["HTML", "CSS", "JavaScript", "React Js", "Node JS", "Express", "MongoDB"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Minus quis sed, iure inventore nulla aspernatur alias dolorem nemo asperiores, tempora, labore assumenda corporis doloribus. Modi culpa dolor beatae vero quibusdam!",
+      "sourceCodePath": "#",
+      "liveDemoPath": "#"
+    },
+    {
+      "title": "Test",
+      "category": "Open Source",
+      "logoPath": "",
+      "bannerPath": "",
+      "tags": ["React Js", "Next Js", "HTML", "CSS"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "sourceCodePath": "#",
+      "liveDemoPath": "#"
+    },
+    {
+      "title": "Birthday Tracker",
+      "category": "My Personal Project",
+      "logoPath": "",
+      "bannerPath": "",
+      "tags": ["React Js", "JavaScript", "HTML"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "sourceCodePath": "#",
+      "liveDemoPath": "#"
+    }
+  ]
+}
