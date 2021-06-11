@@ -22,6 +22,21 @@ body {
 }
 
 
+.tags {
+  margin: 5px 10px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+
+    margin: 5px;
+    padding: 0px 5px;
+    background-color: $lighter-gray;
+    border: 1px solid gray;
+    border-radius: 20px;
+  }
+}
+
 a{
   color: #000;
   text-decoration: none;

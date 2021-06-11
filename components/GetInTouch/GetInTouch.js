@@ -1,6 +1,7 @@
 import ContactBox from "./ContactBox/ContactBox";
 import useIsElementVisible from "./Logic/animation";
 import styles from "./GetInTouch.module.scss";
+import Image from "next/image";
 
 
 // TODO
@@ -30,7 +31,7 @@ export default function GetInTouch() {
         <ContactBox
           boxClassName={isElementVisible ? styles.fadeIn : ""}
           image={{
-            path: "/assets/call.svg",
+            path: "/assets/phone-call.svg",
             height: 60,
             width: 60,
             alt: "Call",
@@ -52,8 +53,8 @@ export default function GetInTouch() {
           boxClassName={isElementVisible ? styles.fadeIn : ""}
           image={{
             path: "/assets/chat.svg",
-            height: 50,
-            width: 50,
+            height: 60,
+            width: 60,
             alt: "Chat",
           }}
           title="Chat With Me"
@@ -65,11 +66,22 @@ export default function GetInTouch() {
           }
         >
           <div className={styles.chatNow}>
-            <div className={`${styles.icon} ${styles.first}`}>F</div>
-            <div className={styles.icon}>G</div>
+            {
+              [
+                'instagram', 'twitter', 'github', 'linkedin'
+              ].map((icon) => {
+                return (
+                <div className={`${styles.icon}`} key={icon}>
+                    <Image src={`/assets/${icon}-round.svg`} alt='' height={50} width={50} />
+                </div>
+                )
+              })
+            }
+            {/* <div className={styles.icon}>G</div>
             <div className={styles.icon}>E</div>
-            <div className={`${styles.icon} ${styles.last}`}>W</div>
-            <div className={styles.label}>Chat Now</div>
+            <div className={`${styles.icon}`}>W</div>
+          */}
+            <div className={styles.label}>Chat Now</div> 
           </div>
         </ContactBox>
       </div>

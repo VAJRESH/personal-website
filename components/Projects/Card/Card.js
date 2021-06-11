@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "../Projects.module.scss";
+import styles from "./Card.module.scss";
 
 export default function Card({
   title,
@@ -20,18 +20,10 @@ export default function Card({
           <Image src={bannerPath} alt={title} height={150} width={200} className={styles.img}/> :
           <div className={styles.img}>Image</div>
       }
-      {/* add logo at the center inside circle and main image as banner */}
-      <div className={styles.logo}>
-        {logoPath ? (
-          <Image src={logoPath} alt="" height={20} width={20} />
-        ) : (
-          "Logo"
-        )}
-      </div>
       <h4>{title}</h4>
       <article>{description}</article>
 
-      <div className={styles.tags}>
+      <div className='tags'>
         {tags.map((tag) => {
           return <span key={tag}>{tag}</span>;
         })}
