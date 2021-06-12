@@ -52,13 +52,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [ ] Education Background
 - [ ] Mini projects like code pen
 - [ ] Background Animations
-- [ ] Blog (Separate Project)
-    - Blog Writing
-    - Authenticity
-    - User Login for email notification
-    - Comments
-    - Profile
-    - Tag
+- [ ] Blog project link
+- [ ] project tracker link
 
 ## Progress (Due Date: 5 June, 2021)
 - Created new folder and started project at 21:50 on 13 May, 2021.

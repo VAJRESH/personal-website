@@ -75,7 +75,7 @@ export default function Projects() {
               )}
               <Card
                 title={project.title}
-                logoPath={project.logoPath}
+                type={project.category}
                 bannerPath={project.bannerPath}
                 tags={project.tags}
                 description={project.description}

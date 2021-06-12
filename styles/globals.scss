@@ -8,6 +8,8 @@
 
 html,
 body {
+  position: relative;
+
   font-family: $font;
 }
 
@@ -24,6 +26,7 @@ body {
 
 .tags {
   margin: 5px 10px;
+  color: #000;
 
   span {
     display: inline-flex;
