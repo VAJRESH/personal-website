@@ -8,9 +8,9 @@ export default function AboutMe() {
   const titleRef = useHoverTextAnimation();
 
   return (
-    <div className={`container ${styles.hero}`} dir="ltr" id="home">
+    <div className={`container ${styles.hero}`} dir="ltr" id="Home">
       <h1 ref={titleRef}>
-        {/* Hi, I'm <span>Vajresh!! */}
+        {/* Hi, I'm Vajresh!! */}
         <span>H</span>
         <span>i</span>
         <span>,&nbsp;</span>
@@ -28,15 +28,14 @@ export default function AboutMe() {
       </h1>
 
       <article>
-        <p>Software Developer who is passionate</p>
+        <p>Web Developer who is passionate</p>
         <p>about creating and</p>
-        <p>developing solutions and</p>
-        <p>work on amazing projects</p>
+        <p>developing solutions.</p>
       </article>
 
       <Link href="/projects">
         <a>
-          <div className={styles.link}>See My Work</div>
+          <div className='btn-link'>See My Work</div>
         </a>
       </Link>
 

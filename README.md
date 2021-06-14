@@ -35,12 +35,25 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     - [x] Intro
     - [x] Get In touch
     - [x] Card Container
-  - [ ] Deploy
+  - [x] Deploy
 
-## New Features
-- Add Dark Mode
-- Show featured projects in home page in rotating cube
-- Pop up modal message after spending 30 seconds
+## Features
+- [x] Social Links
+- [ ] Featured Projects 
+- [ ] Downloadable Resume
+- [ ] Pop up modal message after spending 30 seconds
+- [ ] Complete projects details
+- [ ] Add Dark Mode
+
+- [ ] GIF
+- [ ] process
+- [ ] Skills Section
+- [ ] Specialties and Services
+- [ ] Education Background
+- [ ] Mini projects like code pen
+- [ ] Background Animations
+- [ ] Blog project link
+- [ ] project tracker link
 
 ## Progress (Due Date: 5 June, 2021)
 - Created new folder and started project at 21:50 on 13 May, 2021.
@@ -52,7 +65,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Added functionality to select tags and minor changes in the card and tags style[31 May, 2021].
 - Changed the file structure and added search functionality to filter by title[2 June, 2021].
 - Completed the MVP functionality, only adding colors is remaining [3 June, 2021].
-- Added projects category and logo space in the projects card. [5 June, 2021].
+- Added projects category and logo space in the projects card and deployed the project. [5 June, 2021].
+
 
 ## Technologies Used
 - I am planning to use this technologies and tools

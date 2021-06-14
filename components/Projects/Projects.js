@@ -35,7 +35,7 @@ export default function Projects() {
           </label>
         </div>
 
-        <div className={styles.tags}>
+        <div className='tags'>
           {selectedTags.map((tag, index) => {
             // Cross by ProSymbols from the Noun Project
             return (
@@ -45,7 +45,7 @@ export default function Projects() {
                 className={styles.selectedTag}
               >
                 {tag}
-                <Image src="/assets/cross.svg" alt="" height={20} width={20} />
+                <Image src="/assets/cross-symbol.svg" alt="" height={15} width={15} />
               </span>
             );
           })}
@@ -75,7 +75,7 @@ export default function Projects() {
               )}
               <Card
                 title={project.title}
-                logoPath={project.logoPath}
+                type={project.category}
                 bannerPath={project.bannerPath}
                 tags={project.tags}
                 description={project.description}

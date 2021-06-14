@@ -1,9 +1,10 @@
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 import MetaData from "./MetaData/MetaData";
-import styles from './Layout.module.scss';
+import Sidebar from "./Sidebar/Sidebar";
+import styles from "./Layout.module.scss";
 
-export default function Layout({ children }) {
+export default function Layout({ showSideBar, children }) {
   return (
     <div>
       <MetaData title="Vajresh" />
@@ -18,7 +19,26 @@ export default function Layout({ children }) {
         ]}
       />
 
-      
+      {
+        showSideBar &&
+        <Sidebar
+          internalLinks={[
+            {
+              icon: "/assets/homepage.svg",
+              title: "Home",
+            },
+            {
+              icon: "/assets/bulb-lighting.svg",
+              title: "Projects",
+            },
+            {
+              icon: "/assets/contact-book.svg",
+              title: "Contact",
+            },
+          ]}
+        />
+      }
+
       <main className={styles.layoutContainer}>{children}</main>
 
       <Footer></Footer>

@@ -1,5 +1,4 @@
 @import '../../../styles/base.scss';
-$navbar-bg: #fff;
 
 @mixin minWidthDisplay($size, $display, $visibility) {
     @media only screen and (min-width: $size){

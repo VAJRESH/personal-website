@@ -1,0 +1,46 @@
+@import '../../../styles/base.scss';
+
+.sidebar{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 1px solid $light-gray;
+    background-color: $lighter-gray;
+
+    .sideBarContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        
+        position: relative;
+        margin: 20px 0;
+        
+        .sidebarIcon{
+            min-width: 60px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .tooltip{
+            display: none;
+
+            position: absolute;
+            left: 50px;
+            top: -50%;
+
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid $light-gray;
+            background-color: $sky-blue;
+            color: #fff;
+        }
+        
+        .sidebarIcon:hover + .tooltip{
+            display: block;
+        }
+    }
+
+}
