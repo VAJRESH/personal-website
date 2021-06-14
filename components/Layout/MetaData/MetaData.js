@@ -9,6 +9,8 @@ export default function MetaData({ title, favicon = "/favicon.ico" }) {
       <meta name="description" content="Vajresh Personal Website" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
+      
+      <meta name="google-site-verification" content="Y0RNDMLimNQxeWzIDODsJ7Ms9iqvmkCx21FP0Z0-gFI" />
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <script
             async
