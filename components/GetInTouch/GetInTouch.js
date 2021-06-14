@@ -3,23 +3,30 @@ import useIsElementVisible from "./Logic/animation";
 import styles from "./GetInTouch.module.scss";
 import Image from "next/image";
 
-
-// TODO
-{
-  /* Tooltip credits */
-}
-{
-  /* chat by i cons from the Noun Project */
-}
-{
-  /* call by FMF Design from the Noun Project */
-}
+const socialMediaLinks = [
+  // {
+  //   iconName: "instagram",
+  //   link: "",
+  // },
+  {
+    iconName: "twitter",
+    link: "https://twitter.com/Vajreshh",
+  },
+  {
+    iconName: "github",
+    link: "https://github.com/VAJRESH",
+  },
+  {
+    iconName: "linkedin",
+    link: "https://www.linkedin.com/in/vajresh-patkar-a0634b1aa/",
+  },
+];
 
 export default function GetInTouch() {
   const [isElementVisible, slideIn] = useIsElementVisible();
 
   return (
-    <div className={`container ${styles.contactUs}`} id="contact">
+    <div className={`container ${styles.contactUs}`} id="Contact">
       <h1>Get In Touch</h1>
 
       <article>
@@ -66,22 +73,25 @@ export default function GetInTouch() {
           }
         >
           <div className={styles.chatNow}>
-            {
-              [
-                'instagram', 'twitter', 'github', 'linkedin'
-              ].map((icon) => {
-                return (
-                <div className={`${styles.icon}`} key={icon}>
-                    <Image src={`/assets/${icon}-round.svg`} alt='' height={50} width={50} />
+            {socialMediaLinks.map((object) => {
+              return (
+                <div className={styles.icon} key={object.iconName}>
+                  <a href={object.link} target="_blank">
+                    <Image
+                      src={`/assets/${object.iconName}-round.svg`}
+                      alt=""
+                      height={50}
+                      width={50}
+                    />
+                  </a>
                 </div>
-                )
-              })
-            }
+              );
+            })}
             {/* <div className={styles.icon}>G</div>
             <div className={styles.icon}>E</div>
             <div className={`${styles.icon}`}>W</div>
           */}
-            <div className={styles.label}>Chat Now</div> 
+            <div className={styles.label}>Chat Now</div>
           </div>
         </ContactBox>
       </div>

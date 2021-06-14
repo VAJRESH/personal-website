@@ -45,7 +45,7 @@
     height: 100vh;
     width: 100vw;
 
-    background-color: rgba(70, 70, 70, 0.500);
+    background-color: $modal-bg;
     z-index: 2;
 
     @media screen and (max-width: 500px) {
@@ -60,7 +60,7 @@
       position: relative;
       min-height: 50vh;
       margin: auto 10px;
-      background-color: rgb(73, 73, 73);
+      background-color: $modal-content-bg;
       color: #fff;
       
       @media screen and (max-width:900px) {
@@ -103,6 +103,7 @@
         
         article{
           height: 100%;
+          max-width: 40vw;
           
           p{
             padding: 5px;
@@ -122,9 +123,10 @@
             border: 2px solid $gray;
             padding: 5px 10px;
             border-radius: 2px;
-        
+            
             &:hover {
-              background-color: skyblue;
+              border-color: $sky-blue;
+              background-color: $sky-blue;
             }
           }
         }

@@ -1,12 +1,23 @@
 @import '../../styles/base.scss';
 
 .featuredProjects{
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
+
+    h1{
+        margin-top: 20px;
+    }
+
     .projects{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+    }
+
+    .moreProjects{
+        margin: 10px auto;
+        font-size: 1.1rem;
+        font-weight: 600;
     }
 }

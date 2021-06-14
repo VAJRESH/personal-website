@@ -1,8 +1,4 @@
 @import '../../styles/base.scss';
-$name-text-shadow: rgb(158, 158, 158);
-$sky-blue: #00a1ff;
-$para-size: 1.5rem;
-$heading-size: 2.5rem;
 
 // animations
 @keyframes scaleUp {
@@ -56,42 +52,7 @@ $heading-size: 2.5rem;
         }
     }
 
-    .link{
-        position: relative;
-
-        width: fit-content;
+    a{
         margin: 50px auto;
-        color: black;
-        padding: 10px 20px;
-        border-radius: 5px;
-        border: 5px solid $sky-blue;
-        @include fadeIn(link);
-
-        &:hover{
-            color: #fff;
-        }
-
-        &:before{
-            @include pseudoContent(auto, auto);
-            top: 100%;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: $sky-blue;
-            
-            z-index: -1;
-            
-            transition: top 0.3s ease-in;
-        }
-        
-        &:hover::before{
-            top: 0;
-        }
-
-        a{
-            color: inherit;
-            text-decoration: none;
-            font-weight: 600;
-        }
     }
 }

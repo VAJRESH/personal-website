@@ -5,7 +5,7 @@ import FeaturedProjects from "../components/Projects/FeaturedProjects";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout showSideBar>
       <AboutMe />
       <FeaturedProjects />
       <GetInTouch />

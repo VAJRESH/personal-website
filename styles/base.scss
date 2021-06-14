@@ -1,8 +1,8 @@
-$font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+  Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
 $light-white: #eaeaea;
-$box-shadow:  rgb(37, 37, 37);
+$box-shadow: rgb(37, 37, 37);
 
 $para-size: 1.5rem;
 $heading-size: 2.5rem;
@@ -10,28 +10,85 @@ $heading-size: 2.5rem;
 $footer-height: 30px;
 $navbar-height: 70px;
 
+$sky-blue: #00a1ff;
+
+// about me page
+$name-text-shadow: rgb(158, 158, 158);
+$para-size: 1.5rem;
+$heading-size: 2.5rem;
+
+// get in touch page
+$cta-color: aquamarine;
+
+// navbar component
+$navbar-bg: #fff;
+
 // project cards related color
 $lighter-gray: rgb(250, 250, 250);
 $light-gray: rgb(220, 220, 220);
 $gray: rgb(192, 192, 192);
+$modal-bg: rgba(70, 70, 70, 0.700);
+$modal-content-bg: rgb(73, 73, 73);
+$selected-tag: #b777f3;
+
 
 @mixin fadeIn($name) {
-    animation: $name 3s;
-  
-    @keyframes #{$name} {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+  animation: $name 3s;
+
+  @keyframes #{$name} {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
+}
 
-  @mixin pseudoContent($height, $width) {
-    content: "";
-    height: $height;
-    width: $width;
+@mixin pseudoContent($height, $width) {
+  content: "";
+  height: $height;
+  width: $width;
 
-    position: absolute;
+  position: absolute;
+}
+
+
+// buttons which redirect to another page
+.btn-link {
+  position: relative;
+
+  width: fit-content;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 5px solid $sky-blue;
+  @include fadeIn(link);
+
+  &:hover {
+    color: #fff;
   }
+
+  &:before {
+    @include pseudoContent(auto, auto);
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $sky-blue;
+
+    z-index: -1;
+
+    transition: top 0.3s ease-in;
+  }
+
+  &:hover::before {
+    top: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
