@@ -7,6 +7,7 @@
     transform: translateY(-50%);
     border: 1px solid $light-gray;
     background-color: $lighter-gray;
+    z-index: 2;
 
     .sideBarContainer{
         display: flex;

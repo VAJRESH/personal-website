@@ -7,31 +7,40 @@
       "logoPath": "",
       "bannerPath": "/assets/media-tracker.PNG",
       "tags": ["HTML", "CSS", "JavaScript", "React Js", "Node JS", "Express", "MongoDB"],
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Minus quis sed, iure inventore!",
-      "sourceCodePath": "#",
-      "liveDemoPath": "#"
-    },
-    {
-      "title": "Test",
-      "category": "Open Source",
-      "isFeatured": false,
-      "logoPath": "",
-      "bannerPath": "",
-      "tags": ["React Js", "Next Js", "HTML", "CSS"],
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-      "sourceCodePath": "#",
-      "liveDemoPath": "#"
+      "description": "It is a full stack website where user can find latest movies and tv series and details about it along with similar movies or series. User can save and manage list of watched movies and tv series. The data is provided by TMDB (https://www.themoviedb.org/).",
+      "sourceCodePath": "https://github.com/VAJRESH/media-tracker",
+      "liveDemoPath": "https://track-media.herokuapp.com/"
     },
     {
       "title": "Birthday Notifier",
       "category": "My Personal Project",
       "isFeatured": true,
       "logoPath": "",
-      "bannerPath": "",
-      "tags": ["React Js", "JavaScript", "HTML"],
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, perspiciatis necessitatibus illo qui nisi sunt distinctio nostrum laborum corporis sed officia fugit dolorem accusamus, exercitationem, dolor consequatur aperiam aut reprehenderit!",
-      "sourceCodePath": "#",
-      "liveDemoPath": "#"
+      "bannerPath": "/assets/birthday-notifier.PNG",
+      "tags": ["HTML", "CSS", "JavaScript", "React Js", "Node JS", "Express", "MongoDB"],
+      "description": "Full stack website to save birthdays and get email reminders on your registered email automatically.",
+      "sourceCodePath": "https://github.com/VAJRESH/birthday-notifier",
+      "liveDemoPath": "https://birthday-notifier00.herokuapp.com/"
+    },
+    {
+      "title": "Landing Page",
+      "category": "Other Minor Projects",
+      "logoPath": "",
+      "bannerPath": "/assets/landing-page.PNG",
+      "tags": ["HTML", "SCSS", "Bootstrap"],
+      "description": "Landing page website created to learn Bootstrap and SCSS. Tried to replicate the design.",
+      "sourceCodePath": "https://github.com/VAJRESH/Landing-Page",
+      "liveDemoPath": "https://vajresh.github.io/Landing-Page/"
+    },
+    {
+      "title": "First Portfolio Website",
+      "category": "Other Minor Projects",
+      "logoPath": "",
+      "bannerPath": "/assets/portfolio-website.PNG",
+      "tags": ["HTML", "SCSS", "Bootstrap"],
+      "description": "This is one of the first website that I created for improving my skills in HTML, CSS and JavaScript.",
+      "sourceCodePath": "https://github.com/VAJRESH/Vajresh.github.io",
+      "liveDemoPath": "https://vajresh.github.io/"
     }
   ]
 }
