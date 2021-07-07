@@ -37,7 +37,7 @@
       "category": "Other Minor Projects",
       "logoPath": "",
       "bannerPath": "/assets/portfolio-website.PNG",
-      "tags": ["HTML", "SCSS", "Bootstrap"],
+      "tags": ["HTML", "CSS", "JavaScript"],
       "description": "This is one of the first website that I created for improving my skills in HTML, CSS and JavaScript.",
       "sourceCodePath": "https://github.com/VAJRESH/Vajresh.github.io",
       "liveDemoPath": "https://vajresh.github.io/"
