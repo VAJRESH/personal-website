@@ -7,8 +7,11 @@ import styles from "./Card.module.scss";
 function useManageDetails() {
   const [isMouseOver, setMouseOver] = useState();
 
-  function handleClick() {
-    console.log("s");
+  function handleClick(e, isModal) {
+    e.stopPropagation(); 
+    console.log("s", isModal);
+    if (isModal) return;
+
     setMouseOver(!isMouseOver);
   }
 
@@ -27,13 +30,11 @@ export default function Card({
   const [handleClick, isMouseOver] = useManageDetails();
 
   return (
-    <section className={styles.card} onClick={handleClick}>
+    <section className={styles.card} onClick={(e) => handleClick(e, false)}>
       {bannerPath ? (
-        <Image
+        <img
           src={bannerPath}
           alt={title}
-          height={150}
-          width={200}
           className={styles.img}
         />
       ) : (
@@ -44,18 +45,16 @@ export default function Card({
       <div className={isMouseOver ? styles.modalForDetails : styles.hideModal}>
         <section className={styles.modalContent}>
           {bannerPath ? (
-            <Image
+            <img
               src={bannerPath}
               alt={title}
-              height={150}
-              width={200}
               className={styles.modalImage}
             />
           ) : (
             <div className={styles.modalImage}>Image</div>
           )}
-          <div className={styles.details}>
-            <span className={styles.closeModal}>
+          <div className={styles.details} onClick={(e) => handleClick(e, true)}>
+            <span className={styles.closeModal} onClick={(e) => handleClick(e, false)}>
               <Image src='/assets/cross.svg' alt='' height={30} width={30} />
             </span>
 
@@ -72,12 +71,8 @@ export default function Card({
             </article>
 
             <div className={styles.actions}>
-              <Link href={sourceCodePath}>
-                <a>View Code</a>
-              </Link>
-              <Link href={liveDemoPath}>
-                <a>Demo</a>
-              </Link>
+                <a href={sourceCodePath} target='_blank'>View Code</a>
+                <a href={liveDemoPath} target='_blank'>Demo</a>
             </div>
           </div>
         </section>
@@ -85,3 +80,4 @@ export default function Card({
     </section>
   );
 }
+
