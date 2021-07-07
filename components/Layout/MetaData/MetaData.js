@@ -29,6 +29,8 @@ export default function MetaData({ title, favicon = "/favicon.ico" }) {
             }}
           />
 
+      <meta name="google-site-verification" content="Y0RNDMLimNQxeWzIDODsJ7Ms9iqvmkCx21FP0Z0-gFI" />
+      
       <link rel="icon" href={favicon} />
       
       {/* <!-- Icons --> */}
