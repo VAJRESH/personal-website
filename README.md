@@ -1,16 +1,12 @@
 # Personal Website
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Aim
 - Personal Website so that all of my staff can be centralized.
 
 ## Overview
 - This website will be the central point of all my projects and will act as portfolio.
-- The MVP will have 2 pages: Home and Projects page.
-- Both pages will have common header, footer and theme.
-- Home page will have 3 sections with some animations, the first section is introduction, the second section will have featured projects and the third section will be get in touch.
-- The projects page will have all the projects that I worked in card format and will redirect to another page/website which will be its case study(redirection is not in MVP).
+- It has 2 pages home and projects with common navigation bar and footer.
+- I plan to add more pages with time.
 
 ## Task and Progress
 - [x] Finalize all the pages
@@ -39,7 +35,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Features
 - [x] Social Links
-- [ ] Featured Projects 
+- [x] Featured Projects 
 - [ ] Downloadable Resume
 - [ ] Pop up modal message after spending 30 seconds
 - [ ] Complete projects details
@@ -54,19 +50,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [ ] Background Animations
 - [ ] Blog project link
 - [ ] project tracker link
-
-## Progress (Due Date: 5 June, 2021)
-- Created new folder and started project at 21:50 on 13 May, 2021.
-- Added basic info and steps in the `README.md`.
-- Created a basic plan for the project. [15 May, 2021].
-- Created home, get in touch, projects pages [18 May, 2021].
-- Removed get in touch page and added it in the home page, added animations to name, get in touch boxes, added bounce scroll button. [26 May 2021].
-- Added project component which has search bar, tags, and projects cards[28 May, 2021].
-- Added functionality to select tags and minor changes in the card and tags style[31 May, 2021].
-- Changed the file structure and added search functionality to filter by title[2 June, 2021].
-- Completed the MVP functionality, only adding colors is remaining [3 June, 2021].
-- Added projects category and logo space in the projects card and deployed the project. [5 June, 2021].
-
 
 ## Technologies Used
 - I am planning to use this technologies and tools
