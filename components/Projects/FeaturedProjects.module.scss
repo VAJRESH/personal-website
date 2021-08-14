@@ -3,9 +3,10 @@
 .featuredProjects{
     justify-content: space-between;
     text-align: center;
+    @include setFontSize($text-small);
 
     h1{
-        margin-top: 20px;
+        @include setFontSize($heading-small);
     }
 
     .projects{

@@ -11,7 +11,8 @@
   width: 100%;
   height: $footer-height;
   background-color: $light-white;
-  
+  z-index: $topZIndexLayer;
+  @include setFontSize($text-small);
 
   a {
     display: flex;

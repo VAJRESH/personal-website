@@ -1,58 +1,81 @@
-@import '../../styles/base.scss';
+@import "../../styles/base.scss";
 
 // animations
-@keyframes scaleUp {
-    from{
-        transform: scale(0.1);
-    }
-    to{
-        transform: scale(1);
-    }
-}
-
 @keyframes rotateSideways {
-    0%, 100%{
-        transform: rotateY(0deg);
-    }
-    50%{
-        transform: rotateY(180deg);
-    }
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
 }
 
 
+$minWidthForStyles: 860px;
 
-.hero{   
-    margin: auto;
+.hero {
+  text-align: justify;
+  @include setFontSize($text-medium);
+
+  @media (max-width: $minWidthForStyles) {
     text-align: center;
-    width: fit-content;
-    font-size: $para-size;
-    
-    h1{
-        font-size: $heading-size;
-        margin-top: 70px;
-        
-        animation: scaleUp 1s 1;
+    justify-content: center;
+    height: fit-content;
+    scroll-snap-align: start;
+  }
 
-        span{
-            display: inline-block;
-            text-shadow: 2px 2px 1px $name-text-shadow;
-        }
-        .flip{
-            color: $sky-blue;
+  .aboutMe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 
-            animation: rotateSideways 0.5s ease-out;
-        }
+    .leftSide,
+    .rightSide {
+      padding: 0 20px;
+      height: max-content;
     }
 
-    article{
+    .rightSide {
+      @include setFontSize($text-small);
+    }
+
+    h1 {
+      @include setFontSize($heading-large);
+      z-index: $topZIndexLayer;
+      transition: all 2s ease;
+
+      span {
+        display: inline-block;
+        text-shadow: 2px 2px 1px $name-text-shadow;
+      }
+      .bounce{
+        opacity: 1;
+      }
+      .flip {
+        color: $sky-blue;
+        animation: rotateSideways 0.5s ease-out;
+      }
+    }
+
+    article {
+      margin-top: 40px;
+      max-width: 20rem;
+
+      @media screen and (max-width: 500px) {
+        padding: 0 10px;
+      }
+    }
+
+    a {
+      div {
         margin-top: 50px;
 
-        @media screen and (max-width: 500px) {
-            padding: 0 10px;
+        @media (max-width: $minWidthForStyles) {
+          margin: 50px auto;
         }
+      }
     }
-
-    a{
-        margin: 50px auto;
-    }
+  }
 }

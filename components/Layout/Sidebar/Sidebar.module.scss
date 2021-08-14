@@ -1,47 +1,68 @@
-@import '../../../styles/base.scss';
+@import "../../../styles/base.scss";
 
-.sidebar{
-    position: fixed;
-    top: 50%;
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  
+  .observer {
+    position: absolute;
     left: 0;
-    transform: translateY(-50%);
+    top: -100%;
+    
+    height: 200%;
+    width: 6rem;
+  }
+  
+  .sidebarBox {
+    visibility: hidden;
+    width: 60px;
     border: 1px solid $light-gray;
     background-color: $lighter-gray;
-    z-index: 2;
+    margin-left: -60px;
+    z-index: $topZIndexLayer;
+  }
 
-    .sideBarContainer{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 10px;
-        
-        position: relative;
-        margin: 20px 0;
-        
-        .sidebarIcon{
-            min-width: 60px;
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
+  .observer:hover ~ .sidebarBox,
+  .sidebarBox:hover {
+    visibility: visible;
+    margin-left: 0;
+    transition: all 0.5s;
+  }
 
-        .tooltip{
-            display: none;
+  .sideBarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
 
-            position: absolute;
-            left: 50px;
-            top: -50%;
+    position: relative;
+    margin: 20px 0;
 
-            padding: 10px;
-            border-radius: 10px;
-            border: 2px solid $light-gray;
-            background-color: $sky-blue;
-            color: #fff;
-        }
-        
-        .sidebarIcon:hover + .tooltip{
-            display: block;
-        }
+    .sidebarIcon {
+      min-width: 60px;
+      font-weight: 600;
+      font-size: 1.2rem;
     }
 
+    .tooltip {
+      display: none;
+
+      position: absolute;
+      left: 50px;
+      top: -50%;
+
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid $light-gray;
+      background-color: $sky-blue;
+      color: #fff;
+    }
+
+    .sidebarIcon:hover + .tooltip {
+      display: block;
+    }
+  }
 }
