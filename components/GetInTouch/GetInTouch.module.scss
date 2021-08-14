@@ -2,7 +2,7 @@
 
 .contactUs {
   text-align: center;
-  @include setFontSize($text-small);
+  @include setFontSize($text-medium);
 
   h1 {
     margin-bottom: 20px;
@@ -51,6 +51,7 @@
       .chatNow {
         width: 10rem;
         margin: auto;
+        @include setFontSize($text-medium);
       }
 
       .callNow {
@@ -70,7 +71,6 @@
         position: relative;
 
         text-align: center;
-        font-size: small;
         margin: auto;
 
         &:hover .label {
